@@ -9,8 +9,28 @@
         </style>
     </head>
 
+    
     <body>
-        <div class="main">{{body_title}}</div>
+        {% for n in clist %}
+        {% comment %} <div class="main">{{body_title}}</div> {% endcomment %}
+        <div>{{n}}</div>
+        {% endfor %}
+
+        <br/>
+
+
+        <table border = "1", cellpadding = "10">
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+            </tr>
+            {% for d in student_details %}
+            <tr>
+                <td>{{d.name}}</td>
+                <td>{{d.phone}}</td>
+            </tr>
+            {% endfor %}
+        </table>
         
     </body>
 </html>
